@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DSA Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>DSA Progress Tracker</h1>
+
+  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <!-- Input Section -->
+  <div class="input-box">
+    <input type="text" id="question" placeholder="Question Name">
+
+    <select id="difficulty">
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Hard</option>
+    </select>
+
+    <button onclick="addQuestion()">Add</button>
+  </div>
+
+  <!-- Filter -->
+  <div>
+    <select id="filter" onchange="filterQuestions()">
+      <option value="All">All</option>
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-box">
+    <p id="total"></p>
+    <p id="easy"></p>
+    <p id="medium"></p>
+    <p id="hard"></p>
+    <p id="streak"></p>
+  </div>
+
+  <!-- List -->
+  <ul id="list"></ul>
+
+  <!-- Chart -->
+  <canvas id="chart"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
